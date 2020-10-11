@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>RTBTS</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+	<link rel="stylesheet" href="/stylesheets/ready.css">
+	<link rel="stylesheet" href="/stylesheets/demo.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header" style="width:100%">
+			<div class="container-fluid">
+				<div class = "row">
+					<div class="col-md-6 p-0">
+						<div class="row leftside d-flex justify-content-center align-content-center m-0">
+							<div class="text-center">
+								<img src = "/images/bus.svg" alt="bus logo" height="140" width="140">
+								<h2 class="mt-2 text-white">RTBTS</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 p-0">
+						<div class="row rightside d-flex justify-content-center align-content-center m-0">
+							<div class="col-md-12 text-center">
+								<h4>Real Time Bus Tracking System</h4>
+								<h6>Please complete to create your account</h6>
+							</div>
+							<form action="/rtbts/user/signup" method="post" onsubmit="return signUp()" class="col-md-8">
+								<div class="row mt-4">
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name*" value=<%= fail ? firstname : "" %>>
+											<small id="inFirstNameHelp" class="form-text"></small>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name*" value=<%= fail ? lastname : "" %>>
+											<small id="inLastNameHelp" class="form-text"></small>
+										</div>
+									</div>
+								</div>
+								<div class='<%= fail ? "form-group has-error has-feedback" : "form-group" %>'>
+									<input type="email" class="form-control" id="email" name="email" placeholder="Enter Email*" value=<%= fail ? email : "" %>>
+									<small id="inEmailHelp" class="form-text" style='<%= fail ? "color:#ff646d;" : "" %>'><%= fail ? error : "Use the format example@email.com" %></small>
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="password" name="password" placeholder="Password*" value=<%= fail ? password : "" %>>
+									<small id="inPswHelp" class="form-text">Use 8 or more characters with a mix of letters and numbers</small>
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password*" value=<%= fail ? password : "" %>>
+									<small id="inConfirmPswHelp" class="form-text"></small>
+								</div>
+								<small class="form-text pl-2">* required</small>
+								<div class="row pl-4 mt-4">
+									<input type="submit" value="SIGN UP" class="btn btn-primary pl-5 pr-5">
+								</div>
+								<div class="row pl-4 mt-4">
+									<a href="/rtbts"><u>Already have an account? Sign in</u></a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="http://www.themekita.com">
+									ThemeKita
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Help
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://themewagon.com/license/#free-item">
+									Licenses
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						2018, made with <i class="la la-heart heart text-danger"></i> by <a href="http://www.themekita.com">ThemeKita</a>
+					</div>				
+				</div>
+			</footer>
+		</div>
+	</div>
+	
+</body>
+<script src="/javascripts/core/jquery.3.2.1.min.js"></script>
+<script src="/javascripts/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="/javascripts/core/popper.min.js"></script>
+<script src="/javascripts/core/bootstrap.min.js"></script>
+<script src="/javascripts/plugin/chartist/chartist.min.js"></script>
+<script src="/javascripts/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+<script src="/javascripts/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="/javascripts/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script src="/javascripts/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="/javascripts/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+<script src="/javascripts/plugin/chart-circle/circles.min.js"></script>
+<script src="/javascripts/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="/javascripts/ready.min.js"></script>
+<script src="/javascripts/demo.js"></script>
+<script src="/javascripts/signUp.js"></script>
+</html>

@@ -1,0 +1,39 @@
+{
+  "name": "rtbts",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "serverstart": "DEBUG=rtbts:* & npm run devstart"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "aws-iot-device-sdk": "^2.2.4",
+    "aws-sdk": "^2.656.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.9.7",
+    "mongoose-float": "^1.0.4",
+    "morgan": "~1.9.1",
+    "socket.io": "^2.3.0",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
